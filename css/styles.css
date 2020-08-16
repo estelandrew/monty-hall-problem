@@ -62,7 +62,7 @@ h4 {
 }
 
 span#icon {
-  color: #72a3bc;
+  color: var(--row-dark-color);
   font-size: 2em;
   padding: 0;
   width: 2rem;
@@ -71,6 +71,7 @@ span#icon {
 
 span#icon:hover {
   cursor: pointer;
+  color: #80acc2;
 }
 
 div.tooltip-container {
