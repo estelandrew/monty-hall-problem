@@ -279,7 +279,7 @@ span.material-icon-check {
 }
 
 div.stage-door.selected > span.material-icon-check {
-  display: inline-block;
+  display: none;
   color: var(--row-dark-color);
   font-weight: 700;
 }
@@ -311,7 +311,7 @@ button#game-button {
   font-size: 1.5em;
   color: #ffffff;
   outline: none;
-  background-color: var(--button-color);
+  background-color: var(--row-dark-color);
   cursor: pointer;
 }
 
