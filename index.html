@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>The Monty Hall Problem</title>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="results-button" class="results-button-container">
+      <span class="material-icons material-icons-results">table_rows</span>
+      <span class="results-text">Results</span>
+    </div>  
+    <div id="game-area">    
+      <h1 class="test">The Monty Hall Problem</h1>
+      <div class="tooltip-container">
+      <span id="icon" class="material-icons">info</span>
+      <span class="tooltiptext">More Info</span>
+    </div>
+      <h3 class="choose-door highlight">Choose a door:</h3>        
+      <div class="stage">
+        <div id="door1" class="stage-door">
+          <span class="door-label">1</span>
+          <span id="door-prize-door1" class="material-icons door-prize"></span>
+          <span class="material-icons material-icon-check">check_circle_outline</span>
+        </div>   
+        <div id="door2" class="stage-door">
+          <span class="door-label">2</span>
+          <span id="door-prize-door2" class="material-icons door-prize"></span>
+          <span class="material-icons material-icon-check">check_circle_outline</span>
+        </div>    
+        <div id="door3" class="stage-door">
+          <span class="door-label">3</span>
+          <span id="door-prize-door3" class="material-icons door-prize"></span>
+          <span class="material-icons material-icon-check">check_circle_outline</span>
+        </div>
+      </div>
+      <div id="part-two-area" class="hide"></div>
+      <div id="result-text" class="hide"></div>
+      <div id="button"><button id="game-button" class="hide">Submit Choice</button></div>
+    </div>
+    <div id="results-table-overlay">
+      <div id="results" class="results-hidden">
+        <div class="stats-grid stats-row-dark">
+          <div class="grid-item-1">When first selection kept:</div>
+          <div class="grid-item-2">Wins:</div>
+          <div class="grid-item-3"><span id="games-won-stay">0</span></div>
+          <div class="grid-item-4">Attempts:</div>
+          <div class="grid-item-5"><span id="games-stay-attempted">0</span></div>
+          <div class="grid-item-6">Success Rate:</div>
+          <div class="grid-item-7"><span id="games-stay-success-rate">0.00 %</span></div>
+        </div>
+        <div class="stats-grid stats-row-light">
+          <div class="grid-item-1">When selection altered:</div>
+          <div class="grid-item-2">Wins:</div>
+          <div class="grid-item-3"><span id="games-won-altered">0</span></div>
+          <div class="grid-item-4">Attempts:</div>
+          <div class="grid-item-5"><span id="games-altered-attempted">0</span></div>
+          <div class="grid-item-6">Success Rate:</div>
+          <div class="grid-item-7"><span id="games-altered-success-rate">0.00 %</span></div>
+        </div>
+        <div class="stats-grid stats-row-dark">
+          <div class="totals-item-1">Total Games:</div>
+          <div class="totals-item-2"><span id="total-games">0</span></div>
+        </div>
+        <div class="stats-grid stats-row-light">
+          <div class="totals-item-1">Total Wins:</div>
+          <div class="totals-item-2"><span id="total-wins">0</span></div>
+        </div>
+        <div class="stats-grid stats-row-dark">
+          <div class="totals-item-1">Total Losses:</div>
+          <div class="totals-item-2"><span id="total-losses">0</span></div>
+        </div>
+      </div>
+    </div>
+    <div id="more-info-overlay" class="hide">
+      <div id="more-info">
+        <h2 class="highlight">Welcome to the Monty Hall Problem game!</h2>
+        <p>This game is inspired by the Monty Hall problem brainer teaser. You are given a choice of three doors, with a winning prize lying behind one of the doors.</p>
+  
+          <p>After making your initial selection, one of the losing doors will be elimiated and you are given the option of submitting with your original selection, or changing your selection to the other door.</p>
+  
+        <p>The results table will keep track of your statistics as you play, including your success rate at finding the prize when maintaining your first selection as well as success rate when changing your selection to the other option before submitting.</p>
+  
+        <p>If you play enough times, you will find out the your odds are greatly increased by change your selection after the losing door is eliminated (2/3 chance of winning in the latter situation vs. 1/3 chance of winning in the former).</p>
+  
+        <p>For more info about the Monty Hall problem and the math behind the strategy, check out this video from Numberphile on YouTube:</p>
+        <iframe width="350" height="196" src="https://www.youtube.com/embed/4Lb-6rxZxx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div id="close-overlay-button" class="hide">
+      <span class="material-icons material-icons-close">close</span>
+    </div>
+    </div>
+  </div>
+  
+      <script src="js/scripts.js"></script>    
+</body>
+</html>
